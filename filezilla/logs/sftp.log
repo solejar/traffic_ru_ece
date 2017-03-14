@@ -1,0 +1,24 @@
+Mar 14 12:56:32 10.71.55.14 u88166648 Connection from 10.71.55.14 port 64592 on 66.175.239.13 port 22
+Mar 14 12:56:32 10.71.55.14 u88166648 Failed publickey for u88166648 from 10.71.55.14 port 64592 ssh2: RSA dc:88:1d:ef:2f:91:51:3a:1c:8c:f0:d0:36:f4:c2:a9
+Mar 14 12:56:32 10.71.55.14 u88166648 Accepted password for u88166648 from 10.71.55.14 port 64592 ssh2
+Mar 14 12:56:50 10.71.55.14 u88166648 Connection from 10.71.55.14 port 17832 on 66.175.239.13 port 22
+Mar 14 12:56:52 10.71.55.14 u88166648 Failed publickey for u88166648 from 10.71.55.14 port 17832 ssh2: RSA dc:88:1d:ef:2f:91:51:3a:1c:8c:f0:d0:36:f4:c2:a9
+Mar 14 12:56:52 10.71.55.14 u88166648 Accepted password for u88166648 from 10.71.55.14 port 17832 ssh2
+Mar 14 09:58:47 10.71.55.14 u88166648 Connection from 218.22.10.122 port 47843 on 74.208.255.68 port 22
+Mar 14 12:56:52 infongp-us69 sshd[16720]: Connection from 10.71.55.14 port 18314 on 66.175.239.13 port 22
+Mar 14 12:56:52 10.71.55.14 u88166648 Failed publickey for u88166648 from 10.71.55.14 port 18314 ssh2: RSA dc:88:1d:ef:2f:91:51:3a:1c:8c:f0:d0:36:f4:c2:a9
+Mar 14 12:56:52 10.71.55.14 u88166648 Accepted password for u88166648 from 10.71.55.14 port 18314 ssh2
+Mar 14 12:59:37 10.71.55.20 u88166648 Connection from 10.71.55.20 port 51064 on 66.175.239.13 port 22
+Mar 14 12:59:38 10.71.55.20 u88166648 Accepted password for u88166648 from 10.71.55.20 port 51064 ssh2
+Mar 14 13:01:00 10.71.55.20 u88166648 Connection from 10.71.55.20 port 34302 on 66.175.239.13 port 22
+Mar 14 13:01:02 10.71.55.20 u88166648 Accepted password for u88166648 from 10.71.55.20 port 34302 ssh2
+Mar 14 13:01:00 10.71.55.20 u88166648 Connection from 10.71.55.20 port 34312 on 66.175.239.13 port 22
+Mar 14 13:01:02 10.71.55.20 u88166648 Accepted password for u88166648 from 10.71.55.20 port 34312 ssh2
+Mar 14 13:07:00 10.71.55.14 u88166648 Connection closed by 10.71.55.14
+Mar 14 13:07:00 10.71.55.14 u88166648 Connection closed by 10.71.55.14
+Mar 14 13:07:28 10.71.55.14 u88166648 Connection from 10.71.55.14 port 63620 on 66.175.239.13 port 22
+Mar 14 13:07:30 10.71.55.14 u88166648 Failed publickey for u88166648 from 10.71.55.14 port 63620 ssh2: RSA dc:88:1d:ef:2f:91:51:3a:1c:8c:f0:d0:36:f4:c2:a9
+Mar 14 13:07:28 10.71.55.14 u88166648 Connection from 10.71.55.14 port 63508 on 66.175.239.13 port 22
+Mar 14 13:07:30 10.71.55.14 u88166648 Failed publickey for u88166648 from 10.71.55.14 port 63508 ssh2: RSA dc:88:1d:ef:2f:91:51:3a:1c:8c:f0:d0:36:f4:c2:a9
+Mar 14 13:07:30 10.71.55.14 u88166648 Accepted password for u88166648 from 10.71.55.14 port 63620 ssh2
+Mar 14 13:07:30 10.71.55.14 u88166648 Accepted password for u88166648 from 10.71.55.14 port 63508 ssh2
