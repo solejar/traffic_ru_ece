@@ -9,15 +9,74 @@ include 'loc_converter.php';
 
 //this guy stores the params
 class paramStorage{
-	$conditionParams;
-	$locParams;
+	private $conditionParams; 
+	private $locParams;
+	private $feature;
+	/*
+	0 - 1 Forecast first, bool, 0 or 1
+	l - loc1 - for heatmap, zipcode. For route, start location
+	2 - loc2 - for heatmap, range. For route, end location
+	3 - weather - for forecast ==1, null. For forecast ==0, from forms
+	4 - severity - same for both
+	5 - time - same for both
+	6 - day - for forecast ==0, take from form. For forecast ==1, parse from date form
+	7 - date - for forecast==0, null. For forecast ==1, read from form.
+	8 - whichFeature - ‘heatmap’,’route’,’agenda’ based on the folder where index.html is i.e. heatmap/index.html
+	*/
 	
 	//this is where vals are stored
-	function storeParams($inputs){
+	public function storeParams($inputs){
+		$feature = $inputs[8];
 
+		if ($feature == "heatmap"){
+
+			$locParams = array(
+				"zip"        => $inputs[1],
+				"range"      => $inputs[2],
+			)
+			$conditionParams = array(
+				"weather"    => $inputs[3],
+				"severities" => $inputs[4],
+				"time"       => $inputs[5],
+				"day"        => $inputs[6],
+			)
+			
+
+		}else if ($feature == "route") {
+			$locParams = array(
+				"start"        => $inputs[1],
+				"end"      => $inputs[2],
+			)
+			$conditionParams = array(
+				"weather"    => $inputs[3],
+				"severities" => $inputs[4],
+				"time"       => $inputs[5],
+				"day"        => $inputs[6],
+			)
+
+			
+		}
+
+		
 	}	
 	
-	function getParams($whichParam){
+	//public getter for params.
+	public function getParams($whichParam){
+		$output;
+		switch ($whichParam) {
+			case "all":
+				$output = array($locParams,$conditionParams,$feature);
+				return $output;
+			case "location":
+				$output = $locParams;
+				return $output;
+			case "conditions":
+				$output = $conditionParams;
+				return $output;
+			default:
+				$output = array($locParams,$conditionParams,$feature);
+				return $output;
+		}
 	}
 }
 
@@ -40,14 +99,12 @@ $user_params = $argv[1];
 if($forecast==1){
 	$date = $user_params[7];
 	
-	//$weather_command = sprintf('/usr/bin/php weather_collector.php %s',$date);
-	//this is a func from 'weather_collector.php'
-	$weather_command = forecast_weather($date);
-	//$weather_forecast = shell_exec($weather_command);
+	$weather_forecast = forecast_weather($date);
 	user_params[3] =  $weather_forecast;
 }
 
 paramStore = new paramStorage();
+
 //make param storage, put params in it
 paramStore.storeParams($user_params);
 
@@ -65,13 +122,12 @@ $condition_params = $all_params[1];
 //this is the feature I'm on!
 $feature = $all_params[2];
 
-//$loc_command = sprintf('/usr/bin/php loc_converter.php %s, %s'
 $latlng_location = get_location($location_params,$feature);
-//$latlng_location = shell_exec('/usr/bin/php loc_converter.php paramsgohere');
 
-$traffic_sev_array = shell_exec('/usr/bin/php traffic_collector.php params');
 
-$map = shell_exec('/usr/bin/php map_communicator.php params');
+//$traffic_sev_array = shell_exec('/usr/bin/php traffic_collector.php params');
+
+//$map = shell_exec('/usr/bin/php map_communicator.php params');
 
 //not sure how this gets passed back to javascript
 
