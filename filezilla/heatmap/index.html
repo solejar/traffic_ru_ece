@@ -84,8 +84,9 @@
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
-      #map {
+      #map-canvas {
         height: 100%;
+        width: 100%;
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
@@ -925,7 +926,7 @@
 
 						<div class="panel-body-map">
 
-							<div id="map"></div>	
+							<div id="map-canvas"></div>	
 
 						</div>
 
@@ -2338,16 +2339,77 @@
 	<script src="js/jquery.slimscroll.min.js"></script>
 
     <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 40.499141, lng: -74.454334},
-          zoom: 8
-        });
+
+      // reference: http://stackoverflow.com/questions/13310776/google-maps-api-is-it-possible-to-highlight-specific-streets
+
+      // setting map options
+      var myOptions = {
+        mapTypeId: 'roadmap'
+      };
+
+      // NOTE: for the options above, we can choose where to center the map when it loads, i would center it at the center of the grid we load
+
+      // rendering options are specificially for the route
+      var renderOptionsSev4 = {
+            suppressMarkers: true, 
+            polylineOptions: {
+                                strokeColor: "red",
+                                strokeWeight: 6,
+                                strokeOpacity: 0.6}
       }
+
+      var renderOptionsSev3 = {
+            suppressMarkers: true, 
+            polylineOptions: {
+                                strokeColor: "orange",
+                                strokeWeight: 6,
+                                strokeOpacity: 0.6}
+      }
+
+      // declaring map variable
+      var map;
+
+      // this initMap() function gets called when the website loads
+      function initMap() {
+
+        // setting map to display in the "map-canvas" div
+        map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
+        // dirService variable used for finding routes
+        var dirService = new google.maps.DirectionsService();   
+
+        // you need a new DirectionsRenderer for each new polyline, this is called in requestDirections function
+        function renderDirections(result,options){
+            var dirRenderer = new google.maps.DirectionsRenderer(options);
+            dirRenderer.setMap(map);
+            dirRenderer.setDirections(result); 
+        }
+
+        // this is the function used for each route to display, options is where you choose the color
+        function requestDirections(start,end,options){
+            var request = {
+                origin: start,
+                destination: end,
+                //waypoints: [{location:"48.12449,11.5536"}, {location:"48.12515,11.5569"}],
+                travelMode: google.maps.TravelMode.DRIVING
+            };
+            dirService.route(request, function(result, status) {
+                if (status == google.maps.DirectionsStatus.OK) {
+                    renderDirections(result,options);
+                }
+            });
+        }
+
+        requestDirections("48.1252,11.5407","48.13376,11.5535",renderOptionsSev4);
+        requestDirections("48.130605, 11.539121","48.119498, 11.540567",renderOptionsSev3);
+
+      }
+
+
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFuL6yafR8BuhdbzupDAcorVH4sAO2YpE&callback=initMap"
     async defer></script>
+    <!--<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyBFuL6yafR8BuhdbzupDAcorVH4sAO2YpE" async defer>
+    </script>-->
 
   <script>
 
@@ -2404,42 +2466,6 @@
       });
 
 	  
-
-	  /* ---------- Map ---------- */
-
-	$(function(){
-
-	  $('#map').vectorMap({
-
-	    map: 'world_mill_en',
-
-	    series: {
-
-	      regions: [{
-
-	        values: gdpData,
-
-	        scale: ['#000', '#000'],
-
-	        normalizeFunction: 'polynomial'
-
-	      }]
-
-	    },
-
-		backgroundColor: '#eef3f7',
-
-	    onLabelShow: function(e, el, code){
-
-	      el.html(el.html()+' (GDP - '+gdpData[code]+')');
-
-	    }
-
-	  });
-
-	});
-
-
 
   </script>
 
