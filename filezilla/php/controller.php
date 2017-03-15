@@ -33,26 +33,26 @@ class paramStorage{
 			$locParams = array(
 				"zip"        => $inputs[1],
 				"range"      => $inputs[2],
-			)
+			);
 			$conditionParams = array(
 				"weather"    => $inputs[3],
 				"severities" => $inputs[4],
 				"time"       => $inputs[5],
 				"day"        => $inputs[6],
-			)
+			);
 			
 
 		}else if ($feature == "route") {
 			$locParams = array(
 				"start"      => $inputs[1],
 				"end"        => $inputs[2],
-			)
+			);
 			$conditionParams = array(
 				"weather"    => $inputs[3],
 				"severities" => $inputs[4],
 				"time"       => $inputs[5],
 				"day"        => $inputs[6],
-			)
+			);
 
 			
 		}
@@ -80,7 +80,8 @@ class paramStorage{
 	}
 }
 
-$user_params;
+$user_params = json_decode(stripslashes($_POST['data']));
+
 $weather_forecast;
 $latlng_location;
 $route_array;
@@ -126,15 +127,18 @@ if($feature == "route"){
 	$route_array = get_route($latlng_location);
 
 	//then get the traffs for those routes
-	$traffic_sev_array = get_traffic($route, $condition_params);
+	$traffic_sev_array = get_traffic($route, $location_params, $condition_params);
 
 }else if($feature == "heatmap"){
 	//if heatmap, get traffs in area
-	$traffic_sev_array = get_traffic($latlng_location,$condition_params);
+	$traffic_sev_array = get_traffic($latlng_location,$location_params,$condition_params);
+
 }
 
+echo $traffic_sev_array;
 
 //now we need to get this back to the html page!
+
 
 
 
