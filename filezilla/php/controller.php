@@ -44,8 +44,8 @@ class paramStorage{
 
 		}else if ($feature == "route") {
 			$locParams = array(
-				"start"        => $inputs[1],
-				"end"      => $inputs[2],
+				"start"      => $inputs[1],
+				"end"        => $inputs[2],
 			)
 			$conditionParams = array(
 				"weather"    => $inputs[3],
@@ -88,9 +88,6 @@ $traffic_sev_array;
 $map;
 $graphs;
 
-//adding flag for feature type
-$which_feature;
-
 //collect args from argv
 //might be nice to make this a list.
 $user_params = $argv[1];
@@ -124,11 +121,21 @@ $feature = $all_params[2];
 
 $latlng_location = get_location($location_params,$feature);
 
+if($feature == "route"){
+	//get route from gmaps
+	$route_array = get_route($latlng_location);
 
-//$traffic_sev_array = shell_exec('/usr/bin/php traffic_collector.php params');
+	//then get the traffs for those routes
+	$traffic_sev_array = get_traffic($route, $condition_params);
 
-//$map = shell_exec('/usr/bin/php map_communicator.php params');
+}else if($feature == "heatmap"){
+	//if heatmap, get traffs in area
+	$traffic_sev_array = get_traffic($latlng_location,$condition_params);
+}
 
-//not sure how this gets passed back to javascript
+
+//now we need to get this back to the html page!
+
+
 
 ?>
