@@ -1,7 +1,7 @@
 
 <?php
 	
-$keyZipLC = "t7aqb0QvBndjdXuxsP9VOuYSMZ2N8RhCYr29rSE3gSntPR0iGadvFcorbqfjiwWh";
+$keyZipLC = "O1qklLIMiUT3c2AUfNfFqS4yYT3EybUndkHy6qlpkesxg3rwQHbhzgPy9TcI566i";
 $keyGeoCodLC = "AIzaSyAn4WHKnArDlLswqx47mjkBRmFbTgtvoxk";
 
 
@@ -49,7 +49,7 @@ function get_location($locParams, $feature){
 	else if ($feature === "route"){
 		//echo "route";
 
-		$latLongLC = callLocServRoute($locParams);
+		$latLongLC = callLocServRoute($locParams); //array of (startlat,startlng,endlat, endlng)
 		return $latLongLC;
 
 	}
