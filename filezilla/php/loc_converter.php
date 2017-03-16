@@ -49,7 +49,7 @@ function get_location($locParams, $feature){
 	else if ($feature === "route"){
 		//echo "route";
 
-		$latLongLC = callLocServRoute($locParams);
+		$latLongLC = callLocServRoute($locParams); //array of (startlat,startlng,endlat, endlng)
 		return $latLongLC;
 
 	}
