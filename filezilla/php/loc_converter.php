@@ -5,9 +5,9 @@ $keyZipLC = "O1qklLIMiUT3c2AUfNfFqS4yYT3EybUndkHy6qlpkesxg3rwQHbhzgPy9TcI566i"; 
 $keyGeoCodLC = "AIzaSyAn4WHKnArDlLswqx47mjkBRmFbTgtvoxk"; //Ridwan gmail API key
 $keyGeoZip = "AIzaSyBHHotUySVfCduC-qH6j_aKsIYAcb5qqWE"; //Ridwan Scarlet Mail API key
 
-
-
 /*
+
+
 $locParamsLC =  array(
 				"zip"        => "08817",
 				"range"      => "10",
@@ -19,7 +19,8 @@ $locParamsLCRoute =  array(
 			);
 
 $feature1 = "heatmap";
-
+$feature2 = "route";
+/*
 $arrayLC = get_location($locParamsLC, $feature1);
 
 echo $arrayLC[0];
@@ -27,7 +28,7 @@ echo "<br>";
 echo $arrayLC[1];
 
 echo "<br>";
-$feature2 = "route";
+
 $arrayRouteLC = get_location($locParamsLCRoute, $feature2);
 echo "<br>";
 echo $arrayRouteLC[0][0];
@@ -69,6 +70,15 @@ function get_Zip($locParams, $feature) {
 		}
 		curl_setopt($chGeoLCZip, CURLOPT_URL, $urlStartZipLC);
 		curl_setopt($chGeoLCZip, CURLOPT_RETURNTRANSFER, TRUE);
+
+		if (curl_exec($chGeoLCZip)=== false){
+			//error
+
+		}
+		else {
+			//success
+
+		}
 
 		$dataStartZipLC = curl_exec($chGeoLCZip);
 		curl_close($chGeoLCZip);
