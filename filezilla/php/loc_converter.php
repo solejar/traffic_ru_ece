@@ -1,18 +1,21 @@
 
 <?php
 	
-$keyZipLC = "O1qklLIMiUT3c2AUfNfFqS4yYT3EybUndkHy6qlpkesxg3rwQHbhzgPy9TcI566i";
-$keyGeoCodLC = "AIzaSyAn4WHKnArDlLswqx47mjkBRmFbTgtvoxk";
+$keyZipLC = "O1qklLIMiUT3c2AUfNfFqS4yYT3EybUndkHy6qlpkesxg3rwQHbhzgPy9TcI566i"; //Ridwan Zip code APi key
+$keyGeoCodLC = "AIzaSyAn4WHKnArDlLswqx47mjkBRmFbTgtvoxk"; //Ridwan gmail API key
+$keyGeoZip = "AIzaSyBHHotUySVfCduC-qH6j_aKsIYAcb5qqWE"; //Ridwan Scarlet Mail API key
 
 
-/*$locParamsLC =  array(
+
+/*
+$locParamsLC =  array(
 				"zip"        => "08817",
 				"range"      => "10",
 			);
 
 $locParamsLCRoute =  array(
-				"start"      => "7 Hancock Court East Brunswick NJ",
-				"end"      => "504 Merrywood Drive Edison NJ",
+				"start"      => "504 Merrywood Drive Edison NJ",
+				"end"      => "7 Hancock Court East Brunswick NJ",
 			);
 
 $feature1 = "heatmap";
@@ -27,14 +30,69 @@ echo "<br>";
 $feature2 = "route";
 $arrayRouteLC = get_location($locParamsLCRoute, $feature2);
 echo "<br>";
-echo $arrayRouteLC[0];
+echo $arrayRouteLC[0][0];
 echo "<br>";
-echo $arrayRouteLC[1];
+echo $arrayRouteLC[0][1];
 echo "<br>";
-echo $arrayRouteLC[2];
+echo $arrayRouteLC[1][0];
 echo "<br>";
-echo $arrayRouteLC[3];
+echo $arrayRouteLC[1][1];
+echo "<br>";
+
+$testZip = get_Zip($locParamsLCRoute, $feature2);
+
+echo $testZip;
 */
+
+function get_Zip($locParams, $feature) {
+	global $keyGeoCodLC;
+
+	if ($feature === "heatmap") {
+		if (strlen($locParams["zip"])==5) {
+		
+			return $locParams["zip"];
+		}
+
+	}
+
+	else if ($feature === "route") {
+		$urlStartZipLC = 'https://maps.googleapis.com/maps/api/geocode/json?address='.urlencode($locParams["start"]).'&result_type=postal_code&key='.$keyGeoCodLC;
+		if (!function_exists('curl_init')){
+			die('Can\'t find cURL module');	
+		}
+		$chGeoLCZip = curl_init();
+		if (!$chGeoLCZip){
+			die('Couldn\'t initialize a cURL module');	
+		}
+		else {
+				//success		
+		}
+		curl_setopt($chGeoLCZip, CURLOPT_URL, $urlStartZipLC);
+		curl_setopt($chGeoLCZip, CURLOPT_RETURNTRANSFER, TRUE);
+
+		$dataStartZipLC = curl_exec($chGeoLCZip);
+		curl_close($chGeoLCZip);
+		$parseStartZip = json_decode($dataStartZipLC);
+
+		//print_r($parseStartZip->results[0]->address_components[6]->types[0]);
+		//print_r($parseStartZip->results[0]->address_components[6]->long_name);
+		if ($parseStartZip->results[0]->address_components[6]->types[0]== "postal_code"){
+			//echo "success";
+			$startZip = $parseStartZip->results[0]->address_components[6]->long_name;
+
+		}
+		else {
+			//return an error 
+		}
+
+		return $startZip;
+
+		
+
+
+
+	}
+}
 
 
 function get_location($locParams, $feature){
@@ -49,6 +107,7 @@ function get_location($locParams, $feature){
 	else if ($feature === "route"){
 		//echo "route";
 
+
 		$latLongLC = callLocServRoute($locParams); //array of (startlat,startlng,endlat, endlng)
 		return $latLongLC;
 
@@ -58,7 +117,7 @@ function get_location($locParams, $feature){
 
 function callLocServHeat($locParams) {
 
-	//global $keyZipLC;
+	global $keyZipLC;
 	//$zipCode = "08816";
 	$zipCodeLC = $locParams["zip"];
 
@@ -96,7 +155,7 @@ function callLocServHeat($locParams) {
 
 function callLocServRoute($locParams){
 
-	//global $keyGeoCodLC;
+	global $keyGeoCodLC;
 
 	$urlStartLC = 'https://maps.googleapis.com/maps/api/geocode/json?address='.urlencode($locParams["start"]).'&key='.$keyGeoCodLC;
 
