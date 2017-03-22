@@ -2366,6 +2366,14 @@
                                 strokeOpacity: 0.6}
       }
 
+    var renderOptionsSev2 = {
+            suppressMarkers: true, 
+            polylineOptions: {
+                                strokeColor: "yellow",
+                                strokeWeight: 6,
+                                strokeOpacity: 0.6}
+      }
+
       // declaring map variable
       var map;
 
@@ -2399,8 +2407,31 @@
             });
         }
 
-        requestDirections("48.1252,11.5407","48.13376,11.5535",renderOptionsSev4);
-        requestDirections("48.130605, 11.539121","48.119498, 11.540567",renderOptionsSev3);
+        // requestDirections("48.1252,11.5407","48.13376,11.5535",renderOptionsSev4);
+        // requestDirections("48.130605, 11.539121","48.119498, 11.540567",renderOptionsSev3);
+
+
+        /*testing for scalability
+        requestDirections("62 guilden st new brunswick nj","52 guildin st new brunswick nj",renderOptionsSev4);
+        requestDirections("51 guilden st new brunswick nj","42 guildin st new brunswick nj",renderOptionsSev3);
+        requestDirections("41 guilden st new brunswick nj","32 guildin st new brunswick nj",renderOptionsSev2);
+        requestDirections("31 guilden st new brunswick nj","22 guildin st new brunswick nj",renderOptionsSev4);
+        requestDirections("21 guilden st new brunswick nj","12 guildin st new brunswick nj",renderOptionsSev3);
+        requestDirections("11 guilden st new brunswick nj","2 guildin st new brunswick nj",renderOptionsSev2);
+        requestDirections("62 delafield st new brunswick nj","52 delafield st new brunswick nj",renderOptionsSev4);
+        requestDirections("51 delafield st new brunswick nj","42 delafield st new brunswick nj",renderOptionsSev3);
+        requestDirections("41 delafield st new brunswick nj","32 delafield st new brunswick nj",renderOptionsSev2);
+        requestDirections("31 delafield st new brunswick nj","22 delafield st new brunswick nj",renderOptionsSev4);
+        requestDirections("90 easton ave new brunswick nj","100 easton ave new brunswick nj",renderOptionsSev3);
+        */
+
+        requestDirections("40.7428759,-74.00584719999999","40.7422925,-74.004457",renderOptionsSev2);
+        requestDirections("40.7422925,-74.004457","40.7421744,-74.0045361",renderOptionsSev4);
+        requestDirections("40.7421744,-74.0045361","40.7416627,-74.0049708",renderOptionsSev3);
+        // requestDirections("41 delafield st new brunswick nj","32 delafield st new brunswick nj",renderOptionsSev2);
+        // requestDirections("31 delafield st new brunswick nj","22 delafield st new brunswick nj",renderOptionsSev4);
+        // requestDirections("90 easton ave new brunswick nj","100 easton ave new brunswick nj",renderOptionsSev3);
+
 
       }
 
