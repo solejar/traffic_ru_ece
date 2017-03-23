@@ -103,9 +103,11 @@ function parse_route($routeJSON){
 
         $returnSteps[] = $step;
 
+        $stepsJSON = json_encode($returnSteps);
+
     }
 
-    return $returnSteps;
+    return $stepsJSON;
 
 }
 
