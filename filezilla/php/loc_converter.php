@@ -5,45 +5,7 @@ $keyZipLC = "O1qklLIMiUT3c2AUfNfFqS4yYT3EybUndkHy6qlpkesxg3rwQHbhzgPy9TcI566i"; 
 $keyGeoCodLC = "AIzaSyAn4WHKnArDlLswqx47mjkBRmFbTgtvoxk"; //Ridwan gmail API key
 $keyGeoZip = "AIzaSyBHHotUySVfCduC-qH6j_aKsIYAcb5qqWE"; //Ridwan Scarlet Mail API key
 
-/*
 
-
-$locParamsLC =  array(
-				"zip"        => "08817",
-				"range"      => "10",
-			);
-
-$locParamsLCRoute =  array(
-				"start"      => "504 Merrywood Drive Edison NJ",
-				"end"      => "7 Hancock Court East Brunswick NJ",
-			);
-
-$feature1 = "heatmap";
-$feature2 = "route";
-/*
-$arrayLC = get_location($locParamsLC, $feature1);
-
-echo $arrayLC[0];
-echo "<br>";
-echo $arrayLC[1];
-
-echo "<br>";
-
-$arrayRouteLC = get_location($locParamsLCRoute, $feature2);
-echo "<br>";
-echo $arrayRouteLC[0][0];
-echo "<br>";
-echo $arrayRouteLC[0][1];
-echo "<br>";
-echo $arrayRouteLC[1][0];
-echo "<br>";
-echo $arrayRouteLC[1][1];
-echo "<br>";
-
-$testZip = get_Zip($locParamsLCRoute, $feature2);
-
-echo $testZip;
-*/
 
 function get_Zip($locParams, $feature) {
 	global $keyGeoCodLC;
