@@ -1,4 +1,17 @@
 
+<?php 
+	$today = date('F j, Y');
+	$tomorrow = date('F j, Y', strtotime('+'.'1'.' day'));
+	$day2 = date('F j, Y', strtotime('+'.'2'.' day'));
+	$day3 = date('F j, Y', strtotime('+'.'3'.' day'));
+	$day4 = date('F j, Y', strtotime('+'.'4'.' day'));
+	$day5 = date('F j, Y', strtotime('+'.'5'.' day'));
+	$day6 = date('F j, Y', strtotime('+'.'6'.' day'));
+	$day7 = date('F j, Y', strtotime('+'.'7'.' day'));
+	$day8 = date('F j, Y', strtotime('+'.'8'.' day'));
+	$day9 = date('F j, Y', strtotime('+'.'9'.' day'));
+?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -146,34 +159,14 @@
                                       <!-- Edit profile form (not working)-->
 
                                       <form id="frm1" action="/action_page.php" class="form-horizontal">
-                            
-
-                                          <div class="checkbox">
-                                         <label>
-                                      
-                                         <input type="checkbox" name="forecast"value="false">Forecast</label>
-                                         </div>
-                                        <!--</div>-->
-
-
+                                          <!-- Title -->
                                           <div class="form-group">
                                             <label class="control-label col-lg-2" for="title">Zip Code</label>
                                             <div class="col-lg-10"> 
                                               <input type="text" name="ZipCode" class="form-control">
                                             </div>
                                           </div>   
-                                          <!-- Cateogry -->
-                                          <div class="form-group">
-                                            <label class="control-label col-lg-2">Weather</label>
-                                            <div class="col-lg-10">                               
-                                                <select class="form-control" name="weather">
-                                                  <option value="">- Choose Weather -</option>
-                                                  <option value="Rain" >Rain</option>
-                                                  <option value="Snow" >Snow</option>
-                                                  <option value="Sunny" >Sunny</option>
-                                                </select>  
-                                            </div>
-                                          </div>     
+                                          <!-- Cateogry -->   
                                          
                                             <div class="form-group">
                                             <label class="control-label col-lg-2">Severity</label>
@@ -219,17 +212,20 @@
                                             </div>
                                           </div> 
                                            <div class="form-group">
-                                            <label class="control-label col-lg-2">Day of Week</label>
+                                            <label class="control-label col-lg-2">Date</label>
                                             <div class="col-lg-10">                               
                                                 <select class="form-control" name="day">
-                                                  <option value="">- Choose Day of Week -</option>
-                                                  <option value="Monday">Monday</option>
-                                                  <option value="Tuesday">Tuesday</option>
-                                                  <option value="Wednesday">Wednesday</option>
-                                                  <option value="Thursday">Thursday</option>
-                                                  <option value="Friday">Friday</option>
-                                                  <option value="Saturday">Saturday</option>
-                                                  <option value="Sunday">Sunday</option>
+                                                  <option value="">- Choose Date -</option>
+                                                  <option value="<?=$today;?>"><?=$today;?></option>
+                                                  <option value="<?=$tomorrow;?>"><?=$tomorrow;?></option>
+                                                  <option value="<?=$day2;?>"><?=$day2;?></option>
+                                                  <option value="<?=$day3;?>"><?=$day3;?></option>
+                                                  <option value="<?=$day4;?>"><?=$day4;?></option>
+                                                  <option value="<?=$day5;?>"><?=$day5;?></option>
+                                                  <option value="<?=$day6;?>"><?=$day6;?></option>
+                                                  <option value="<?=$day7;?>"><?=$day7;?></option>
+                                                  <option value="<?=$day8;?>"><?=$day8;?></option>
+                                                  <option value="<?=$day9;?>"><?=$day9;?></option>
                                                 </select>  
                                             </div>
                                           </div>  
@@ -247,12 +243,11 @@
                                             </select>
                                             </div>
                                           </div>
-
-                                          <!--<div class="checkbox">
+                                          <div class="checkbox">
                                          <label>
                                          <input type="checkbox" name="forecast"value="false">Forecast</label>
                                          </div>
-                                        </div>-->
+                                        </div>
                                         
                                           <div class="form-group">
                                             
@@ -367,23 +362,22 @@ function myFunction() {
     document.write("<br>");
     var text1="";
     var n;
-    /*for(n=0; n<x.length; n++){
+    for(n=0; n<x.length; n++){
         text1 += n + ":" + x[n].value +" ";
     }
-    document.write(text1);*/
+    document.write(text1);
 
-    var forecast= x[0].value;
-    var zipcode= x[1].value;
-    var weather=x[2].value;
-    var severity=[x[3].value,x[4].value,x[5].value,x[6].value];
-    var time= x[7].value;
-    var day=x[8].value;
-    var radius= x[9].value;
-    
-    var date=null;
+    var zipcode= x[0].value;
+    var severity=[x[1].value,x[2].value,x[3].value,x[4].value];
+    var time= x[5].value;
+    var date=x[6].value;
+    var radius= x[7].value;
+    var forecast= x[8].value;
+
+    var day;
 
     //if forecast is needed, go to weather collector
-    if(forecast){
+    if(forecast==true){
         //get date from user here, code needed
         forecast=1;
         weather=null;
@@ -391,7 +385,6 @@ function myFunction() {
     }
     else{
         forecast=0;
-        date=null;
     }
     //testing for valid zip code
     var valZip;
@@ -407,11 +400,32 @@ function myFunction() {
         valZip=true;
     }
 
+
+    //else/if to find day from date 
+    if(date == "March 26, 2017" || date == "April 2, 2017" || date == "April 9, 2017" || date == "April 16, 2017" || date == "April 23, 2017" || date == "April 30, 2017" || date == "May 7, 2017"){
+        day="Sunday";
+    }
+    else if(date == "March 27, 2017" || date == "April 3, 2017" || date == "April 10, 2017" || date == "April 17, 2017" || date == "April 24, 2017" || date == "May 1, 2017" || date == "May 8, 2017"){
+        day="Monday";
+    }
+    else if(date == "March 28, 2017" || date == "April 4, 2017" || date == "April 11, 2017" || date == "April 18, 2017" || date == "April 25, 2017" || date == "May 2, 2017" || date == "May 9, 2017"){
+        day="Tuesday";
+    }
+    else if(date == "March 29, 2017" || date == "April 5, 2017" || date == "April 12, 2017" || date == "April 19, 2017" || date == "April 26, 2017" || date == "May 3, 2017" || date == "May 10, 2017"){
+        day="Wednesday";
+    }
+    else if(date == "March 30, 2017" || date == "April 6, 2017" || date == "April 13, 2017" || date == "April 20, 2017" || date == "April 27, 2017" || date == "May 4, 2017" || date == "May 11, 2017"){
+        day="Thursday";
+    }
+    else if(date == "March 31, 2017" || date == "April 7, 2017" || date == "April 14, 2017" || date == "April 21, 2017" || date == "April 28, 2017" || date == "May 5, 2017" || date == "May 12, 2017"){
+        day="Friday";
+    }
+    else{
+        day="Saturday";
+    }
+    document.write("The day is ");
+    document.write(day);
     var inputParams = [forecast, zipcode, radius, weather, severity, time, day, date];
-
-
-    document.write("forecast: " + forecast +"zip: "+zipcode+"radius: "+radius+"1: "+severity[0]+"2: "+severity[1]+"3: "+severity[2]+"4: "+severity[3]+"time: "+time+"day: "+day);
-
     //myAjax(inputParams);
 
 
