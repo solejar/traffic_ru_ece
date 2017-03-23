@@ -116,7 +116,7 @@ function callWeatherService($allParams){
 		//echo "<br>";
 		//print_r($parseWC->hourly_forecast[11]->FCTTIME->pretty);
 		//print_r("<br>");
-		$date_time=$parseWC->hourly_forecast[getInputIndex("12:00am March 25 2017")]->FCTTIME->pretty;
+		$date_time=$parseWC->hourly_forecast[getInputIndex("8:00pm March 25 2017")]->FCTTIME->pretty;
 		//print_r($date_time);
 		//$minute=$parseWC->hourly_forecast[0]->FCTTIME->min;
 		//print_r($hour + ":" + $minute);
@@ -124,14 +124,14 @@ function callWeatherService($allParams){
 		
 		//$myConditionA= $parseWC->hourly_forecast[$input_index]->condition;
 		
-		$myCondition= $parseWC->hourly_forecast[getInputIndex("12:00am March 25 2017")]->condition;
+		$myCondition= $parseWC->hourly_forecast[getInputIndex("8:00pm March 25 2017")]->condition;
 		print_r("<br>");
 		print_r($myCondition);
 		//echo "<br>";
 		//print_r($myConditionA);
 		//$time=$parseWC->FCCTIME;
 		//print_r($time);
-		$weatherArray=array($date_time,$myCondition);
+		$weatherArray=array($date_time,weatherSwitch($myCondition));
 		echo "<br>";
 		print_r(array_values($weatherArray));
 		//echo weatherSwitch($myCondition);
@@ -189,6 +189,14 @@ function weatherSwitch($myCondition)
 			case "Heavy Blowing Snow":
 			case "Light Blowing Snow":
 			case "Small Hail":
+			case "Chance of Flurries":
+			case "Chance of Sleet":
+			case "Chance of Snow":
+			case "Flurries":
+			case "Blowing Snow":
+			case "Chance of Snow Showers":
+			case "Chance of Ice Pellets":
+			case "Blizzard":
 				$myCondition = "Snow";
 				break;
 			case "Mostly Cloudy":
@@ -198,6 +206,8 @@ function weatherSwitch($myCondition)
 			case "Clear":
 			case "Partly Cloudy":
 			case "Scattered Clouds":
+			case "Very Hot":
+			case "Very Cold":
 				$myCondition= "Clear";
 				break;
 			case "Fog":
@@ -212,6 +222,7 @@ function weatherSwitch($myCondition)
 			case "Haze":
 			case "Light Haze":
 			case "Heavy Haze":
+			case "Scattered Clouds":
 				$myCondition= "Fog";
 				break;
 			case "Drizzle":
@@ -235,17 +246,28 @@ function weatherSwitch($myCondition)
 			case "Thunderstorms and Rain":
 			case "Heavy Thunderstorms and Rain":
 			case "Light Thunderstorms and Rain":
+			case "Chance of Rain":
+			case "Chance of a Thunderstorm":
+			case "Chance Rain":
+			case "Chance of Freezing Rain":
+			case "Chance of Thunderstorms":
+			case "Thunderstorm":
+			case "Thunderstorms":
+			case "Chance of Showers":
+			case "Showers":
+			
 				$myCondition= "Rain";
 				break;
 			default:
 				// what should we make any different things go in as?
-				$weatherDN = "Invalid";
+				$myCondition = "Invalid";
 				break;
 		}
 		//echo $myCondition;
 	
 	//Helper function used by getForecast(). Makes an API call to the weather service, and formats the API’s JSON response into an array of forecast info
 	//return array
+	return $myCondition;
 }
 
 
