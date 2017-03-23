@@ -2374,6 +2374,14 @@
                                 strokeOpacity: 0.6}
       }
 
+    var renderOptionsSevDefault = {
+            suppressMarkers: true, 
+            polylineOptions: {
+                                strokeColor: "#7FB6FA",
+                                strokeWeight: 6,
+                                strokeOpacity: 0.5}
+      }
+
       // declaring map variable
       var map;
 
@@ -2428,6 +2436,16 @@
         requestDirections("40.7428759,-74.00584719999999","40.7422925,-74.004457",renderOptionsSev2);
         requestDirections("40.7422925,-74.004457","40.7421744,-74.0045361",renderOptionsSev4);
         requestDirections("40.7421744,-74.0045361","40.7416627,-74.0049708",renderOptionsSev3);
+
+        requestDirections("40.7416627,-74.0049708","40.7428202, -74.0077185",renderOptionsSev2);
+        requestDirections("40.7428202, -74.0077185","40.7577372, -73.996854",renderOptionsSev4);
+        requestDirections("40.7577372, -73.996854","40.7581447, -73.9977895",renderOptionsSev3);
+
+        requestDirections("40.7581447, -73.9977895","40.7589141, -73.9996907",renderOptionsSev2);
+        requestDirections("40.7589141, -73.9996907","40.7595325, -73.999242",renderOptionsSev4);
+        requestDirections("40.7595325, -73.999242","40.7593444, -73.9988302",renderOptionsSev3);
+
+        requestDirections("40.7428759, -74.0058472","40.8120978, -74.0724079",renderOptionsSevDefault);
         // requestDirections("41 delafield st new brunswick nj","32 delafield st new brunswick nj",renderOptionsSev2);
         // requestDirections("31 delafield st new brunswick nj","22 delafield st new brunswick nj",renderOptionsSev4);
         // requestDirections("90 easton ave new brunswick nj","100 easton ave new brunswick nj",renderOptionsSev3);
