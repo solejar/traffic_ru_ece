@@ -82,6 +82,12 @@ class paramStorage{
 
 $user_params = json_decode(stripslashes($_POST['data']));
 
+$lat_north = "enter me";
+$lat_south = "enter me";
+$lng_west = "enter me";
+$lng_east = "enter me";
+$bbox = array($lat_north,$lat_south,$lng_west,$lng_east);
+
 $weather_forecast;
 $latlng_location;
 $route_array;
@@ -91,13 +97,13 @@ $graphs;
 
 //collect args from argv
 //might be nice to make this a list.
-$user_params = $argv[1];
+//$user_params = $argv[1];
 
 //if forecast===1, get weather
 if($forecast==1){
-	$date = $user_params[7];
-	
-	$weather_forecast = forecast_weather($date);
+	$date = $user_params[6];
+	$zip = get_zip($user_params);
+	$weather_forecast = forecast_weather($date,$zip);
 	user_params[3] =  $weather_forecast;
 }
 
