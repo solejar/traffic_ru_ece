@@ -77,7 +77,7 @@
                     mysqli_query($traff_con,$query_update);
                 }
 
-            }else{
+            }/*else{
                 if($row_grid_start["start_lng"]>$start_lng){
                     $query_update =  "UPDATE bounds as b SET b.start_lat = '$start_lat', b.start_lng = '$start_lng' WHERE b.grid_id = '$grid_id_start' AND b.road_name = '$road_name'";
                     mysqli_query($traff_con,$query_update);
@@ -86,7 +86,7 @@
                     mysqli_query($traff_con,$query_update);
                 }
 
-            }
+            }*/ //this is gonna come back later. for now, this is too rudimentary to iteratively update
         }
 
 
@@ -120,7 +120,7 @@
                     mysqli_query($traff_con,$query_update);
                 }
 
-            }else{
+            }/*else{
             
                 if($row_grid_end["start_lng"]>$end_lng){
                     $query_update =  "UPDATE bounds as b SET b.start_lat = '$end_lat', b.start_lng = '$end_lng' WHERE b.grid_id = '$grid_id_end' AND b.road_name = '$road_name'";
@@ -129,11 +129,7 @@
                     $query_update =  "UPDATE bounds as b SET b.end_lat = '$end_lat', b.end_lng = '$end_lng' WHERE b.grid_id = '$grid_id_end' AND b.road_name = '$road_name'";
                     mysqli_query($traff_con,$query_update);
                 }
-            }
-
-        }
-
-
-           
+            }*/ //this will be updated later. for now this is too rudimentary.
+        }           
     }
 ?>
