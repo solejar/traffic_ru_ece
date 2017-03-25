@@ -420,7 +420,7 @@
 	for ($i = 0; $i < $total; $i++) {
 		//collect all the needed data from it
 
-		$lat = $info[$i]->point->coordinates[0];
+		$lat = $info[$i]->point->coordinates[0]; 
 		$long = $info[$i]->point->coordinates[1];
 		$desc = $info[$i]->description;
 		$lastModified = $info[$i]->lastModified;
@@ -557,6 +557,16 @@
 			else{
 				$roadName = $parseRG->results[0]->address_components[0]->long_name;
 			}
+
+            //we're gonna add this incident start and stop into db if applicable
+            //renaming vars to match what my file expects
+            $road_name = $roadName;
+            $start_lat = $lat;
+            $start_lng = $long;
+            $end_lat = $latEnd;
+            $end_lng = $longEnd;
+            include('find_startstop.php');
+
 			//start day of the week and hour
 			$startDt0 = date_create($startDT);
 			$startDW = $startDt0->format('w');
