@@ -37,7 +37,8 @@ else {
 }
 
 echo "Testing get_Zip for Route. Expected Result: Passed\n";
-$testZip = get_Zip($locParamsLCRoute, $feature2);
+
+$testZip = getZip($locParamsLCRoute, $feature2);
 
 if ($testZip == "08817"){
 	echo "get_Zip for Route Passed\n";
