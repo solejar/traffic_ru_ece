@@ -49,7 +49,13 @@
                 "day"            => $testDay,
 	);
     
-    $traffTest = getHeatTraff($testLat,$testLng, $testRange, $testInputConditions);
+	$loc_params = array(
+		"cent_lat" => $testLat,
+		"cent_lng" => $testLng,
+		"range"    => $testRange,
+	);
+
+    $traffTest = get_traff($loc_params, $testInputConditions,"heatmap");
 
 	echo "Testing Traffic Collector getHeatTraff Expected Result: Passed<br>";
 	if (!$traffTest){
@@ -62,8 +68,15 @@
 	
 	$testLat = 0;
     $testLng = -50;
-    
-    $traffTest = getHeatTraff($testLat,$testLng, $testRange, $testInputConditions);
+    	
+	$loc_params = array(
+		"cent_lat" => $testLat,
+		"cent_lng" => $testLng,
+		"range"    => $testRange,
+	);
+
+    $traffTest = get_traff($loc_params, $testInputConditions,"heatmap");	
+
 
 	echo "Testing Traffic Collector getHeatTraff Expected Result: Failed<br>";
 	
@@ -78,7 +91,13 @@
 	$testLat = 40.713757;
     $testLng = -74.1402826;
 	$testRd = "New Jersey Turnpike";
-	$traffTest = getRouteTraff($testRd, $testLat, $testLng, $testInputConditions);
+	
+	$loc_params = array(
+		"roadName" => $testRd,
+		"startLat" => $testLat,
+		"startLong"=> $testLng, 
+	);
+	$traffTest = get_traff($loc_params, $testInputConditions,"route");
 	
 	echo "Testing Traffic Collector getRouteTraff Expected Result: Passed<br>";
 	if (!$traffTest){
@@ -92,7 +111,12 @@
 	$testLat = 0;
     $testLng = -50;
 	
-	$traffTest = getRouteTraff($testRd, $testLat, $testLng, $testInputConditions);
+	$loc_params = array(
+		"roadName" => $testRd,
+		"startLat" => $testLat,
+		"startLong"=> $testLng, 
+	);
+	$traffTest = get_traff($loc_params, $testInputConditions,"route");
 	
 	echo "Testing Traffic Collector getRouteTraff Expected Result: Failed<br>";
 	
