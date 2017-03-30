@@ -171,8 +171,8 @@ if(isset($_POST["submit"])){
             "range" => $location_params["range"],
         );
 
-		$testSteps = get_traff($loc_params,$condition_params,$which_feature);
-
+	$testSteps = get_traff($loc_params,$condition_params,$which_feature);
+	//echo var_dump($testSteps);
         //try getting traff severity for heatmap. if it fails, exit w/ error
         if(!testSteps){
             $errorcode = "Your inputs are returning no traffic. Make sure that your search is within the tri-state area, and try to make it more general if possible!";

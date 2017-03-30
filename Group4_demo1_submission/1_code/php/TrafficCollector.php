@@ -11,9 +11,8 @@ class trafficSegment {
 }
 
 function get_traff($location_params,$input_conditions,$feature){
-
 	//get traffic for route
-	if($feature == ("route" || "forecasted_route")){
+	if($feature == "route" || $feature == "forecasted_route"){
 
 		$roadName = $location_params["roadName"];
 		$startLat = $location_params["startLat"];
@@ -22,8 +21,7 @@ function get_traff($location_params,$input_conditions,$feature){
 		$traff_results = query_route_db($roadName, $startLat, $startLong, $input_conditions);
 
 	//get traffic for heat map
-	}else if($feature == ("heatmap"||"forecasted_heatmap")){
-		
+	}else if($feature == "heatmap"|| $feature == "forecasted_heatmap"){
 		$cent_lat = $location_params["cent_lat"];
 		$cent_lng = $location_params["cent_lng"];
 		$query_range = $location_params["range"];
@@ -37,22 +35,13 @@ function get_traff($location_params,$input_conditions,$feature){
 
 //get traff sev from db for heatmap use case
 function query_heat_db($cent_lat,$cent_lng,$query_range, $input_conditions){
-
 	//database connection info
 	$traff_host_name = "db667824699.db.1and1.com";
 	$traff_database  = "db667824699";
 	$traff_user_name = "dbo667824699";
-	$freq_host_name  = "db670831916.db.1and1.com";
-	$freq_database   = "db670831916";
-	$freq_user_name  = "dbo670831916";
+	
 	$password   = "briansbutt";
-
-	//frequency database connection
-	$freq_con = mysqli_connect($freq_host_name, $freq_user_name, $password, $freq_database);
-	// Check connection
-	if (mysqli_connect_errno()){
-	echo "Failed to connect to MySQL: " . mysqli_connect_error();
-	}	
+	
 	//traffic database connection
 	$traff_con = mysqli_connect($traff_host_name, $traff_user_name, $password, $traff_database);
 	// Check connection
@@ -66,6 +55,7 @@ function query_heat_db($cent_lat,$cent_lng,$query_range, $input_conditions){
 	$time=$input_conditions["time"];
 	$sev = $input_conditions["severity"];
 	$inputDay = $input_conditions["day"];
+
 	
 	//switch the day to a number (used in our database)
 	switch ($inputDay){
@@ -208,7 +198,7 @@ function query_heat_db($cent_lat,$cent_lng,$query_range, $input_conditions){
 				}
 				//otherwise set the severity equal to 0 since the user doesnt care about this severity
 				else{
-					$newSegment->severity = 0;	
+					$newSegment->severity = 0;
 				}	
 			}
 			//add this segment to the output array
@@ -278,14 +268,13 @@ function query_heat_db($cent_lat,$cent_lng,$query_range, $input_conditions){
 					$average = ($averageC + $averageS + $averageCL + $averageR + $averageF)/$count;
 				}
 				$newSegment->severity = round($average);
-
 			}
 			else{
 				if ($sev[($sevrow["$query_weather"])-1]){
 					$newSegment->severity = round($sevrow["$query_weather"]);
 				}
 				else{
-					$newSegment->severity = 0;	
+					$newSegment->severity = 0;
 				}	
 			}
 
@@ -303,16 +292,8 @@ function query_route_db($roadName, $startLat, $startLong, $inputConditions){
 	$traff_host_name = "db667824699.db.1and1.com";
 	$traff_database = "db667824699";
 	$traff_user_name = "dbo667824699";
-	$freq_host_name  = "db670831916.db.1and1.com";
-	$freq_database   = "db670831916";
-	$freq_user_name  = "dbo670831916";
-	$password   = "briansbutt";
 
-	$freq_con = mysqli_connect($freq_host_name, $freq_user_name, $password, $freq_database);
-	// Check connection
-	if (mysqli_connect_errno()){
-	echo "Failed to connect to MySQL: " . mysqli_connect_error();
-	}	
+	$password   = "briansbutt";
 
 	$traff_con = mysqli_connect($traff_host_name, $traff_user_name, $password, $traff_database);
 	// Check connection

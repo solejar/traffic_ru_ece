@@ -138,10 +138,12 @@ function test_func($validity_array,$userParams){
     	//this is necessary
 
 	    for ($i = 0; $i<$count; $i++){
-	        $rd = $testSteps[$i]->rdName;
-	        $sLat = $testSteps[$i]->stLat;
-	        $sLo = $testSteps[$i]->stLng;
-	        $testSteps[$i]->severity = getRouteTraff($rd, $sLat, $sLo, $condition_params);
+	        $loc_params = array(
+    	        "roadName"   => $testSteps[$i]->rdName,
+    	        "startLat" => $testSteps[$i]->stLat,
+    	        "startLong"  => $testSteps[$i]->stLng,
+            	);
+	        $testSteps[$i]->severity = get_traff($loc_params, $condition_params,$which_feature);
 	        
 	        //there must be a non-zero severity to make a new map
 	    }
@@ -181,8 +183,13 @@ function test_func($validity_array,$userParams){
             }
         }
 
-        //change this to be generic
-		$testSteps = getHeatTraff($latlng_location[0],$latlng_location[1],$location_params["range"],$condition_params);
+        $loc_params = array(
+            "cent_lat" => $latlng_location[0],
+            "cent_lng" => $latlng_location[1],
+            "range" => $location_params["range"],
+        );
+
+	$testSteps = get_traff($loc_params,$condition_params,$which_feature);
 		$count = sizeof($testSteps);
 		$stepsJSON = json_encode($testSteps);
 
