@@ -1,0 +1,138 @@
+2017-03-27 00:05:46 u88166648 zcMoIN-1ckkhC2pZk-00RWrZ |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-27 00:05:46 u88166648 zcMoIN-1ckkhC2pZk-00RWrZ WW ignored command line option -B
+2017-03-27 01:05:49 u88166648 zd3CLl-1cJaGN3nSE-00Zz5A |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-27 01:05:49 u88166648 zd3CLl-1cJaGN3nSE-00Zz5A WW ignored command line option -B
+2017-03-27 02:05:43 u88166648 zcWsP0-1cqRqQ2C3l-002UCQ |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-27 02:05:43 u88166648 zcWsP0-1cqRqQ2C3l-002UCQ WW ignored command line option -B
+2017-03-27 03:05:42 u88166648 zcWKRA-1cr10n4Arj-0036HS |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-27 03:05:42 u88166648 zcWKRA-1cr10n4Arj-0036HS WW ignored command line option -B
+2017-03-27 04:05:43 u88166648 zcXhLf-1crJjH0GeS-003QQu |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-27 04:05:43 u88166648 zcXhLf-1crJjH0GeS-003QQu WW ignored command line option -B
+2017-03-27 05:05:49 u88166648 zcLAOz-1ck96d2BDW-00R4DR |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-27 05:05:49 u88166648 zcLAOz-1ck96d2BDW-00R4DR WW ignored command line option -B
+2017-03-27 06:05:41 u88166648 zcQ8Df-1cf9pF0yAK-00UocA |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-27 06:05:41 u88166648 zcQ8Df-1cf9pF0yAK-00UocA WW ignored command line option -B
+2017-03-27 07:05:54 u88166648 zcTgzC-1ceKPH2pyv-00YUhi |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-27 07:05:54 u88166648 zcTgzC-1ceKPH2pyv-00YUhi WW ignored command line option -B
+2017-03-27 08:05:49 u88166648 zd8R9K-1cEl000JkX-00e8jZ |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-27 08:05:49 u88166648 zd8R9K-1cEl000JkX-00e8jZ WW ignored command line option -B
+2017-03-27 09:05:52 u88166648 zcdnDN-1d2xvS0bIs-00ASTS |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-27 09:05:52 u88166648 zcdnDN-1d2xvS0bIs-00ASTS WW ignored command line option -B
+2017-03-27 10:05:54 u88166648 zd2Tlw-1c5UoH0TZH-018EBW |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-27 10:05:54 u88166648 zd2Tlw-1c5UoH0TZH-018EBW WW ignored command line option -B
+2017-03-27 11:06:00 u88166648 zcCbhE-1cbGJf1emB-00ISJE |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-27 11:06:00 u88166648 zcCbhE-1cbGJf1emB-00ISJE WW ignored command line option -B
+2017-03-27 12:05:49 u88166648 zcIfRS-1cXPtQ2tQz-00NVBK |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-27 12:05:49 u88166648 zcIfRS-1cXPtQ2tQz-00NVBK WW ignored command line option -B
+2017-03-27 13:05:49 u88166648 zdDwug-1cT91E1tif-00jX26 |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-27 13:05:49 u88166648 zdDwug-1cT91E1tif-00jX26 WW ignored command line option -B
+2017-03-27 14:05:47 u88166648 zchw5O-1cwhsQ0n1l-00DUo6 |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-27 14:05:47 u88166648 zchw5O-1cwhsQ0n1l-00DUo6 WW ignored command line option -B
+2017-03-27 15:05:52 u88166648 zcMGKX-1clKSM17Ly-00SAON |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-27 15:05:52 u88166648 zcMGKX-1clKSM17Ly-00SAON WW ignored command line option -B
+2017-03-27 16:05:52 u88166648 zdD7xx-1cTxFW0QY2-00jstF |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-27 16:05:52 u88166648 zdD7xx-1cTxFW0QY2-00jstF WW ignored command line option -B
+2017-03-27 17:05:01 u88166648 zcYpPr-1coBy91xLM-004TKK |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-27 17:05:01 u88166648 zcYpPr-1coBy91xLM-004TKK WW ignored command line option -B
+2017-03-27 18:05:39 u88166648 zdAtzF-1cELT326RC-00he2t |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-27 18:05:39 u88166648 zdAtzF-1cELT326RC-00he2t WW ignored command line option -B
+2017-03-27 19:05:40 u88166648 zcZNNZ-1cpsHq2Uyc-0066lr |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-27 19:05:40 u88166648 zcZNNZ-1cpsHq2Uyc-0066lr WW ignored command line option -B
+2017-03-27 20:05:50 u88166648 zcquGU-1bx8Ep3T1t-00vjpV |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-27 20:05:50 u88166648 zcquGU-1bx8Ep3T1t-00vjpV WW ignored command line option -B
+2017-03-27 21:05:42 u88166648 zcXQMi-1crqdF0GS7-0048Hd |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-27 21:05:42 u88166648 zcXQMi-1crqdF0GS7-0048Hd WW ignored command line option -B
+2017-03-27 22:05:47 u88166648 zd6U8P-1cInzx1NkM-00d3tb |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-27 22:05:47 u88166648 zd6U8P-1cInzx1NkM-00d3tb WW ignored command line option -B
+2017-03-27 23:05:47 u88166648 zchw5O-1cwqCI3QBt-00Dfsz |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-27 23:05:47 u88166648 zchw5O-1cwqCI3QBt-00Dfsz WW ignored command line option -B
+2017-03-28 00:05:47 u88166648 zcuV9Z-1cB1w109ys-010K6b |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-28 00:05:47 u88166648 zcuV9Z-1cB1w109ys-010K6b WW ignored command line option -B
+2017-03-28 01:05:45 u88166648 zcqdHb-1bxLU91lGy-00vQXV |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-28 01:05:45 u88166648 zcqdHb-1bxLU91lGy-00vQXV WW ignored command line option -B
+2017-03-28 02:05:51 u88166648 zcecA6-1d2KV81AfN-00ABYe |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-28 02:05:51 u88166648 zcecA6-1d2KV81AfN-00ABYe WW ignored command line option -B
+2017-03-28 03:05:55 u88166648 zcQxAG-1cgVVs1tyR-00Wj8V |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-28 03:05:55 u88166648 zcQxAG-1cgVVs1tyR-00Wj8V WW ignored command line option -B
+2017-03-28 04:05:56 u88166648 zd0Huq-1c7QsF2jot-016BGJ |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-28 04:05:56 u88166648 zd0Huq-1c7QsF2jot-016BGJ WW ignored command line option -B
+2017-03-28 05:05:40 u88166648 zcSs2T-1cdzju2uqM-00Yh0E |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-28 05:05:40 u88166648 zcSs2T-1cdzju2uqM-00Yh0E WW ignored command line option -B
+2017-03-28 06:05:46 u88166648 zcQgBN-1cgAf62QwI-00Wa9W |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-28 06:05:46 u88166648 zcQgBN-1cgAf62QwI-00Wa9W WW ignored command line option -B
+2017-03-28 07:05:51 u88166648 zd00vx-1c761R45bC-015pbY |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-28 07:05:51 u88166648 zd00vx-1c761R45bC-015pbY WW ignored command line option -B
+2017-03-28 08:05:54 u88166648 zcwh0f-1c8CbY2IZu-012Tm1 |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-28 08:05:54 u88166648 zcwh0f-1c8CbY2IZu-012Tm1 WW ignored command line option -B
+2017-03-28 09:05:59 u88166648 zcFLWA-1cZFVO1FP7-00K4oF |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-28 09:05:59 u88166648 zcFLWA-1cZFVO1FP7-00K4oF WW ignored command line option -B
+2017-03-28 10:05:55 u88166648 zcpmCI-1c1IZK3pPB-00ucZ5 |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-28 10:05:55 u88166648 zcpmCI-1c1IZK3pPB-00ucZ5 WW ignored command line option -B
+2017-03-28 11:06:11 u88166648 zchO7Y-1cwx1s1HOd-00E4bb |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-28 11:06:11 u88166648 zchO7Y-1cwx1s1HOd-00E4bb WW ignored command line option -B
+2017-03-28 12:05:55 u88166648 zcv37P-1cArcB1sno-00zopd |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-28 12:05:55 u88166648 zcv37P-1cArcB1sno-00zopd WW ignored command line option -B
+2017-03-28 13:05:57 u88166648 zcsp8h-1bvR9h2Idk-00xZvV |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-28 13:05:57 u88166648 zcsp8h-1bvR9h2Idk-00xZvV WW ignored command line option -B
+2017-03-28 14:06:08 u88166648 zcZvLP-1cpdiO2c6O-005ck9 |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-28 14:06:08 u88166648 zcZvLP-1cpdiO2c6O-005ck9 WW ignored command line option -B
+2017-03-28 15:05:46 u88166648 zdHXon-1cOVFU0of0-00oG57 |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-28 15:05:46 u88166648 zdHXon-1cOVFU0of0-00oG57 WW ignored command line option -B
+2017-03-28 16:05:46 u88166648 zcyKu3-1c9hYM0VUi-0133kh |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-28 16:05:46 u88166648 zcyKu3-1c9hYM0VUi-0133kh WW ignored command line option -B
+2017-03-28 17:05:49 u88166648 zcdWEY-1d25760E3l-009FRi |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-28 17:05:49 u88166648 zcdWEY-1d25760E3l-009FRi WW ignored command line option -B
+2017-03-28 18:05:47 u88166648 zcTrbB-1csR0z2pDW-000fMS |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-28 18:05:47 u88166648 zcTrbB-1csR0z2pDW-000fMS WW ignored command line option -B
+2017-03-28 19:05:47 u88166648 zcnJMJ-1c35x934Jo-00s2OM |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-28 19:05:47 u88166648 zcnJMJ-1c35x934Jo-00s2OM WW ignored command line option -B
+2017-03-28 20:05:40 u88166648 zcCKiL-1canTi40xO-00IHE6 |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-28 20:05:40 u88166648 zcCKiL-1canTi40xO-00IHE6 WW ignored command line option -B
+2017-03-28 21:05:45 u88166648 zdEDtV-1cQ39P2h8U-00koOQ |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-28 21:05:45 u88166648 zdEDtV-1cQ39P2h8U-00koOQ WW ignored command line option -B
+2017-03-28 22:05:39 u88166648 zcybsw-1c9vBO2RR7-013K9O |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-28 22:05:39 u88166648 zcybsw-1c9vBO2RR7-013K9O WW ignored command line option -B
+2017-03-28 23:05:53 u88166648 zdGis8-1cNYw60XXn-00nP8r |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-28 23:05:53 u88166648 zdGis8-1cNYw60XXn-00nP8r WW ignored command line option -B
+2017-03-29 00:05:45 u88166648 zcVEVc-1ctM7C2MRr-0022Iq |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-29 00:05:45 u88166648 zcVEVc-1ctM7C2MRr-0022Iq WW ignored command line option -B
+2017-03-29 01:05:44 u88166648 zccOBO-1cnLi111LB-0083DI |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-29 01:05:44 u88166648 zccOBO-1cnLi111LB-0083DI WW ignored command line option -B
+2017-03-29 02:05:44 u88166648 zcsHAr-1bvEiQ2HuM-00yC4O |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-29 02:05:44 u88166648 zcsHAr-1bvEiQ2HuM-00yC4O WW ignored command line option -B
+2017-03-29 03:05:41 u88166648 zcYHS1-1co9rj338k-004yOo |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-29 03:05:41 u88166648 zcYHS1-1co9rj338k-004yOo WW ignored command line option -B
+2017-03-29 04:05:55 u88166648 zcKJKi-1cV9oq1av9-00Q7j0 |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-29 04:05:55 u88166648 zcKJKi-1cV9oq1av9-00Q7j0 WW ignored command line option -B
+2017-03-29 05:05:42 u88166648 zd2Tlw-1c4qXh1fDz-018NeX |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-29 05:05:42 u88166648 zd2Tlw-1c4qXh1fDz-018NeX WW ignored command line option -B
+2017-03-29 06:05:49 u88166648 zd8i89-1cFzdz2xRm-00fTb4 |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-29 06:05:49 u88166648 zd8i89-1cFzdz2xRm-00fTb4 WW ignored command line option -B
+2017-03-29 07:05:53 u88166648 zd7cCb-1cEsr53ElG-00e9SF |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-29 07:05:53 u88166648 zd7cCb-1cEsr53ElG-00e9SF WW ignored command line option -B
+2017-03-29 08:05:59 u88166648 zcxmwD-1c9SYb2pby-013dIF |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-29 08:05:59 u88166648 zcxmwD-1c9SYb2pby-013dIF WW ignored command line option -B
+2017-03-29 09:06:15 u88166648 zdBRx5-1cENJL1oFw-00h2ki |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-29 09:06:15 u88166648 zdBRx5-1cENJL1oFw-00h2ki WW ignored command line option -B
+2017-03-29 10:06:02 u88166648 zcdnDN-1d2XNM1MzG-00AZhk |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-29 10:06:02 u88166648 zcdnDN-1d2XNM1MzG-00AZhk WW ignored command line option -B
+2017-03-29 11:09:19 u88166648 zcDybj-1ccfm71pUy-00Ik3R |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-29 11:09:19 u88166648 zcDybj-1ccfm71pUy-00Ik3R WW ignored command line option -B
+2017-03-29 12:06:03 u88166648 zcCbhE-1calLs3YFn-00IWgf |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-29 12:06:03 u88166648 zcCbhE-1calLs3YFn-00IWgf WW ignored command line option -B
+2017-03-29 13:05:50 u88166648 zcbqDY-1cmxmb2iER-008Wjx |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-29 13:05:50 u88166648 zcbqDY-1cmxmb2iER-008Wjx WW ignored command line option -B
+2017-03-29 14:05:55 u88166648 zcnJMJ-1c3NiR03JU-00ry4Q |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-29 14:05:55 u88166648 zcnJMJ-1c3NiR03JU-00ry4Q WW ignored command line option -B
+2017-03-29 15:05:58 u88166648 zcHIX1-1cXOLO0Vmq-00M3fo |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-29 15:05:58 u88166648 zcHIX1-1cXOLO0Vmq-00M3fo WW ignored command line option -B
+2017-03-29 16:05:57 u88166648 zcnaLC-1c1uHg2awv-00sJOI |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-29 16:05:57 u88166648 zcnaLC-1c1uHg2awv-00sJOI WW ignored command line option -B
+2017-03-29 17:05:48 u88166648 zcQgBN-1cfdww3gvO-00WZV5 |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-29 17:05:48 u88166648 zcQgBN-1cfdww3gvO-00WZV5 WW ignored command line option -B
+2017-03-29 18:05:51 u88166648 zcWbQ7-1cr8nX29GK-002JH6 |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-29 18:05:51 u88166648 zcWbQ7-1cr8nX29GK-002JH6 WW ignored command line option -B
+2017-03-29 19:05:51 u88166648 zcsY9k-1bwyRw48OB-00yU7J |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-29 19:05:51 u88166648 zcsY9k-1bwyRw48OB-00yU7J WW ignored command line option -B
+2017-03-29 20:05:49 u88166648 zdGzr5-1cOloL0gXA-00mRXq |< -- /usr/sbin/sendmail -i -FCronDaemon -B8BITMIME -oem u88166648
+2017-03-29 20:05:49 u88166648 zdGzr5-1cOloL0gXA-00mRXq WW ignored command line option -B
