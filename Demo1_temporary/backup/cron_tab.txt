@@ -1,3 +1,0 @@
-MAILTO = "teamonward04@gmail.com"
-0 * * * * /usr/bin/wget http://onwardtraffic.com/curl.php -O /dev/null 
-

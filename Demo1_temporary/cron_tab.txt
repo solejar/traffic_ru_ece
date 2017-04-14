@@ -1,3 +1,0 @@
-﻿MAILTO = "teamonward04@gmail.com"
-5 * * * * /usr/bin/wget http://onwardtraffic.com/php/masterCurl.php -O /dev/null
-
