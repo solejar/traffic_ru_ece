@@ -1,0 +1,7 @@
+Our data collection is run on a Cron Job  (cron_tab.txt) that calls masterCurl.php. We cannot have this being manually refreshed so we duplicated the process and set it up with an identical copied database for testing purposes. To run the test file for the masterCurl.php process, simply go to http://onwardtraffic.com/php/test_master_curl.php. 
+
+masterCurl.php and find_startstop.php are files run on Cron Job, we have provided you the other files for demo submission purposes.
+
+masterCurl is the cronjob responsible for receiving new traffic information, and also getting new weather information every hour. Find_startstop.php is a helper function which masterCurl calls. Its purpose is to take the current incident and use it to provide information about the road it occurred on to the database.
+
+We were asked to make note of why we have 2 weeks of usable data. We actually started traffic data collection in the beginning of February, and we have that data in traffic_data. However, as we started developing better solutions for our system, we modified our data collection and created new data tables. As we iteratively updated our database model, we realized that there was a specific piece of data which we needed to provide context to the traffic incidents, which we hadn't been collecting. This required us to reset our data. This reset was 2 weeks ago, which is why we have 2 weeks of functional data.}
